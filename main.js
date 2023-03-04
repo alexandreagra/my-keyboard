@@ -85,14 +85,14 @@ const playTune = (key) => {
 
 
 
-// function playAudio(newPath) {
-//     new Audio(newPath).play()
-// }
+function playAudio(newPath) {
+    new Audio(newPath).play()
+}
 
-// const mainKeys = document.querySelectorAll('.key')
+const mainKeys = document.querySelectorAll('.key')
 
-// mainKeys.forEach((mainKey, i) => {
-//     const numberKey = i < 9 ? '0' + (i + 1) : (i + 1)
-//     const newPath = 'tones/key' + numberKey + '.mp3'
-//     mainKey.addEventListener('click', () => playAudio(newPath))
-// })
+mainKeys.forEach((mainKey, i) => {
+    const numberKey = i < 9 ? '0' + (i + 1) : (i + 1)
+    const newPath = 'tones/key' + numberKey + '.mp3'
+    mainKey.addEventListener('click', () => playAudio(newPath))
+})
