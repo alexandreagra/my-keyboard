@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main-keyboard">
+        <section class="keyboard-functions">
+            <div class="keyboard-branding">
+                <h1><strong>My</strong>-Keyboard</h1>
+            </div>
+            <div class="volume-control">
+                <span>Volume</span>
+                <input type="range" class="volume-range" value="" min="0" max="1" step="0.1">
+                <span class="volume-count">0.5</span>
+            </div>
+            <div class="metronome-all">
+                <div class="metronome-first">
+                    <span class="metronome-control">Metronome</span>
+                    <input type="range" class="metronome-range" min="60" max="240" value="60" step="2">
+                    <span class="metronome-count">60</span>
+                </div>
+                <button type="button" class="play-metronome"><box-icon name='play-circle' size="sm" color="#4fc04f"></box-icon></button>
+            </div>
+            <div class="keys-notes">
+                <div class="key-tones">
+                    <span>Show Keys</span>
+                    <input type="checkbox" id="show-keys" checked>
+                </div>
+                <div class="key-notes">
+                    <span>Show Notes</span>
+                    <input type="checkbox" id="show-keys" checked>
+                </div>
+            </div>
+            <div class="tutorial-controls">
+                <span>Tutorial</span>
+                <input type="button" value="OPEN" class="open-tutorial">
+                <span class="learn">*Learn how to play!</span>
+            </div>
+            <div class="songbook">
+                <div class="songbook-controls">
+                    <span>Songbook</span>
+                    <input type="button" value="OPEN" class="open-songbook">
+                </div>
+                        <ul class="songs hide-songbook">
+                            <li><a href="#">Coldplay - Clocks</a></li>
+                            <li><a href="#">Coldplay - The scientst</a></li>
+                            <li><a href="#">Beatles - let it be</a></li>
+                            <li><a href="#">Coldplay - Clocks</a></li>
+                            <li><a href="#">Coldplay - The scientst</a></li>
+                            <li><a href="#">Beatles - let it be</a></li>
+                            <li><a href="#">Coldplay - Clocks</a></li>
+                            <li><a href="#">Coldplay - The scientst</a></li>
+                            <li><a href="#">Beatles - let it be</a></li>
+                            <li><a href="#">Coldplay - Clocks</a></li>
+                            <li><a href="#">Coldplay - The scientst</a></li>
+                            <li><a href="#">Beatles - let it be</a></li>
+                        </ul>
+            </div>
+        </section>
+        <div class="keyboard-keys">
+            <ul class="keys">
+                <li class="key white-key" data-key="a"><span class="notes">c</span><span class="shortcut">a</span></li>
+                <li class="key black-key" data-key="w"><span class="notes">c#</span><span class="shortcut">w</span></li>
+                <li class="key white-key" data-key="s"><span class="notes">d</span><span class="shortcut">s</span></li>
+                <li class="key black-key" data-key="e"><span class="notes">d#</span><span class="shortcut">e</span></li>
+                <li class="key white-key" id="e-tone" data-key="d"><span class="notes">e</span><span class="shortcut">d</span></li>
+                <li class="key white-key" id="f-tone" data-key="f"><span class="notes">f</span><span class="shortcut">f</span></li>
+                <li class="key black-key" data-key="t"><span class="notes">f#</span><span class="shortcut">t</span></li>
+                <li class="key white-key" data-key="g"><span class="notes">g</span><span class="shortcut">g</span></li>
+                <li class="key black-key" data-key="y"><span class="notes">g#</span><span class="shortcut">y</span></li>
+                <li class="key white-key" data-key="h"><span class="notes">a</span><span class="shortcut">h</span></li>
+                <li class="key black-key" data-key="u"><span class="notes">a#</span><span class="shortcut">u</span></li>
+                <li class="key white-key" id="k-tone" data-key="k"><span class="notes">b</span><span class="shortcut">k</span></li>
+                <li class="key white-key" id="l-tone" data-key="l"><span class="notes">c</span><span class="shortcut">l</span></li>
+                <li class="key black-key" data-key="p"><span class="notes">c#</span><span class="shortcut">p</span></li>
+                <li class="key white-key" data-key=";"><span class="notes">d</span><span class="shortcut">;</span></li>
+                <li class="key black-key" data-key="/"><span class="notes">d#</span><span class="shortcut">/</span></li>
+                <li class="key white-key" data-key="]"><span class="notes">e</span><span class="shortcut">]</span></li>
+            </ul>
+        </div>
+    </main>
+    <section class="tutorial-modal">
+        <button class="close-btn"><box-icon name='x' color="white" size="md"></box-icon></button>
+        <h1>Welcome to My-keyboard tutorial!</h1>
+        <br><br>
+        <p>Through this tutorial, you will be able to understand some basic music theory concepts and, with that, play simple songs like the ones listed in the My-Keyboard songbook. Don't be afraid of the term "theory", it's really simple, I promise!</p>
+        <br><br><br>
+        
+        <h2>1 - Playing with musical notes</h2>
+        <br><br>
+        <p>On this keyboard we have 17 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
+        <br>
+        <p>P.S.: Calm down, programmers. In the example above, it's not the "C#" you're thinking of LOL!</p>
+        <br>
+        <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a tonality (which we call "octave") different, starting from a new C, until the last of them that represents an E.  </p>
+        <br><br><br>
+        <h2>2 - Playing Chords</h2>
+        <br><br>
+        <p>Chords are a union of two or more notes. Playing them simultaneously will result in a more harmonious sound. They can be major ("happier" sounds) or minor (deeper or maybe "sad" sounds). We got some examples below, try it yourself:</p>
+
+    </section>
+
+    <footer>
+        <p>Developed and designed by: Alexandre Agra D. Filho.</p>
+        <p>Audio content avaliable in my GitHub repository, free to use!</p>
+      </footer>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
