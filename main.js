@@ -80,15 +80,6 @@ keyNotes.forEach(key => {
   key.addEventListener("click", () => playTune(key));
 });
 
-keyNotes.forEach(key => {
-    key.addEventListener('touchstart', e => {
-        playTune(key).addEventListener("touchend", () => {
-            key.currentTime = 0
-            if (e.repeat) return;
-        })
-    })
-})
-
 document.addEventListener('keydown', e => {
     if (e.repeat) return;
     const key = e.key
@@ -111,4 +102,12 @@ function playTune(key) {
     key.classList.remove('active')
   })
 }
+
+//TOUCH EVENTS
+
+keyNotes.forEach(key => {
+    key.addEventListener('touchend', () => {
+        playTune(key)
+    })
+})
 
