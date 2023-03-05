@@ -239,11 +239,19 @@ h1 strong {
 }
 
 .keys .white-key:active {
+    background-color: none;
+}
+
+.white-key.active {
     background: linear-gradient(to bottom, #fff 15%, #bdbdbd 85%);
     box-shadow: inset -5px -5px 20px rgba(0, 0, 0, 0.215);
 }
 
 .keys .black-key:active {
+    background-color: none;
+}
+
+.black-key.active {
     background: linear-gradient(to bottom, #303030 10%, rgb(117, 117, 117) 90%);
     box-shadow: inset -5px -5px 8px rgba(0, 0, 0, 0.215);
 }
