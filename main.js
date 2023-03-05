@@ -7,6 +7,7 @@ const metronomeInput = document.querySelector(".metronome-range");
 const shortcutCheckbox = document.querySelector(".key-tones input");
 const notesCheckbox = document.querySelector(".key-notes input");
 const keyboardKeys = document.querySelector(".keys");
+const keyboardNotesText = document.querySelectorAll(".notes");
 const keyShortcut = document.querySelectorAll(".shortcut");
 const songbookOpenClose = document.querySelector(".open-songbook");
 const songBook = document.querySelector(".songs");
@@ -45,7 +46,7 @@ shortcutCheckbox.addEventListener("click", hideAndShowShortcuts);
 //
 
 const hideAndShowNotes = () => {
-  keyNotes.forEach((keyNotes) => keyNotes.classList.toggle("hidden-notes"));
+  keyboardNotesText.forEach((keyNotes) => keyNotes.classList.toggle("hidden-notes"));
 };
 
 notesCheckbox.addEventListener("click", hideAndShowNotes);
@@ -68,21 +69,33 @@ songbookOpenClose.addEventListener("click", (e) => {
 
 //KEYBOARD PLAYING
 
-const whiteKeys = ['a', 's', 'd', 'f', 'd', 'f', 't']
+const whiteKeys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
+const blackKeys = ['w', 'e', 't', 'y', 'u', 'o']
 
 const keyNotes = document.querySelectorAll(".key");
+const whiteKeyNotes = document.querySelectorAll(".key.white-key");
+const blackKeyNotes = document.querySelectorAll(".key.black-key");
 
 keyNotes.forEach(key => {
   key.addEventListener("click", () => playTune(key));
 });
 
+document.addEventListener('keydown', e => {
+    if (e.repeat) return;
+    const key = e.key
+    const whiteKeyIndex = whiteKeys.indexOf(key)
+    const blackKeyIndex = blackKeys.indexOf(key)
+
+    if (whiteKeyIndex > -1) {
+        playTune(whiteKeyNotes[whiteKeyIndex])
+    } if (blackKeyIndex > -1) {
+        playTune(blackKeyNotes[blackKeyIndex])
+    }
+})
+
 function playTune(key) {
   const noteAudio = document.getElementById(key.dataset.tone);
   noteAudio.currentTime = 0
   noteAudio.play()
-  key.classList.add('active')
-  noteAudio.addEventListener('ended', () => {
-    key.classList.remove('active')
-  })
 }
 
