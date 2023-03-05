@@ -82,8 +82,9 @@ keyNotes.forEach(key => {
 
 keyNotes.forEach(key => {
     key.addEventListener('touchstart', e => {
-        if (e.repeat) return;
-        playTune(key)
+        playTune(key).addEventListener("touchcancel", () => {
+            if (e.repeat) return;
+        })
     })
 })
 
