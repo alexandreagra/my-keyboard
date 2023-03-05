@@ -107,6 +107,7 @@ function playTune(key) {
 
 keyNotes.forEach(key => {
     key.addEventListener('touchend', () => {
+        playTune(key)
         return;
     })
 })
