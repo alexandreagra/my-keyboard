@@ -81,7 +81,10 @@ keyNotes.forEach(key => {
 });
 
 keyNotes.forEach(key => {
-    key.addEventListener('touchstart', () => playTune(key)), true;
+    key.addEventListener('touchstart', e => {
+        if (e.repeat) return;
+        playTune(key)
+    })
 })
 
 document.addEventListener('keydown', e => {
