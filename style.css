@@ -4,10 +4,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-html {
-    touch-action: manipulation;
-}
-
 body {
     display: flex;
     flex-direction: column;
