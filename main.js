@@ -77,12 +77,16 @@ const whiteKeyNotes = document.querySelectorAll(".key.white-key");
 const blackKeyNotes = document.querySelectorAll(".key.black-key");
 
 keyNotes.forEach(key => {
-    key.addEventListener('touchend', e => {
-        e.preventDefault()
+    key.addEventListener('touchstart', e => {
         playTune(key)
-        return;
     })
 }) //TOUCH EVENTS
+
+keyNotes.forEach(key => {
+    key.addEventListener('touchend', e => {
+        return;
+    })
+})
 
 keyNotes.forEach(key => {
   key.addEventListener("click", () => playTune(key));
