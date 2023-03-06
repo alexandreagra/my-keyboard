@@ -77,6 +77,13 @@ const whiteKeyNotes = document.querySelectorAll(".key.white-key");
 const blackKeyNotes = document.querySelectorAll(".key.black-key");
 
 keyNotes.forEach(key => {
+    key.addEventListener('touchend', e => {
+        playTune(key)
+        return;
+    })
+}) //TOUCH EVENTS
+
+keyNotes.forEach(key => {
   key.addEventListener("click", () => playTune(key));
 });
 
@@ -102,16 +109,4 @@ function playTune(key) {
     key.classList.remove('active')
   })
 }
-
-//TOUCH EVENTS
-
-keyNotes.forEach(key => {
-    key.addEventListener('touchend', e => {
-        if (e.repeat) {
-            return;
-        }
-        playTune(key)
-        return;
-    })
-})
 
