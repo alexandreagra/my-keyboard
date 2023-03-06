@@ -2,9 +2,7 @@
 
 const tutorialOpening = document.querySelector(".tutorial-controls input");
 const tutorialClose = document.querySelector(".close-btn");
-const metronomeInput = document.querySelector(".metronome-range");
 const shortcutCheckbox = document.querySelector(".key-tones input");
-const volumeInput = document.querySelector(".volume-range");
 const notesCheckbox = document.querySelector(".key-notes input");
 const keyboardKeys = document.querySelector(".keys");
 const keyboardNotesText = document.querySelectorAll(".notes");
@@ -16,20 +14,6 @@ const songBook = document.querySelector(".songs");
 window.onload = function () {
   volumeRange();
 };
-
-//VOLUME RANGE CONTROLS
-
-volumeInput.addEventListener("input", () => {
-  const volumeCount = document.querySelector(".volume-count");
-  volumeCount.textContent = parseInt(volumeInput.value * 100);
-});
-
-//METRONOME RANGE CONTROLS
-
-metronomeInput.addEventListener("input", () => {
-  const metronomeCount = document.querySelector(".metronome-count");
-  metronomeCount.textContent = metronomeInput.value;
-});
 
 //HIDE AND SHOW ITEMS
 
@@ -112,6 +96,14 @@ function playTune(key) {
   });
 }
 
+// VOLUME FUNCTION CONTROL
+const volumeInput = document.querySelector(".volume-range");
+
+volumeInput.addEventListener("input", () => {
+  const volumeCount = document.querySelector(".volume-count");
+  volumeCount.textContent = parseInt(volumeInput.value * 100);
+});
+
 let volumeControl = document.querySelector(".volume-control input");
 function volumeRange() {
   Array.from(document.querySelectorAll("audio")).forEach(function (e) {
@@ -121,3 +113,32 @@ function volumeRange() {
 
 volumeControl.addEventListener("change", volumeRange);
 volumeControl.addEventListener("input", volumeRange);
+
+// METRONOME FUNCTION CONTROL
+
+const metronomeInput = document.querySelector("#metronome-range")
+const metronomePlay = document.querySelector("#play-metronome")
+const metronomeAudio = document.querySelector("#bpm-tick")
+
+let currentBpm = 60
+let isPlaying = false
+let timer = null
+
+metronomeInput.addEventListener("input", () => {
+  const metronomeCount = document.querySelector("#metronome-count")
+  metronomeCount.textContent = metronomeInput.value + ' BPM'
+});
+
+// function metronomeBeat() {
+//   metronomeAudio.currentTime = 0
+//   metronomeAudio.play()
+// }
+
+// metronomePlay.addEventListener('click', function () {
+//   if (isPlaying) {
+//     clearInterval(timer)
+//   } else {
+//     const timer = setInterval(metronomeBeat, (60*1000) / currentBpm)
+//   }
+//   isPlaying = !isPlaying
+// })

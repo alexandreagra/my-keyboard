@@ -25,18 +25,19 @@
             <div class="metronome-all">
                 <div class="metronome-first">
                     <span class="metronome-control">Metronome</span>
-                    <input type="range" class="metronome-range" min="60" max="240" value="60" step="2">
-                    <span class="metronome-count">60</span>
+                    <input type="range" min="60" max="160" value="60" id="metronome-range" >
+                    <span id="metronome-count">60 BPM</span>
                 </div>
-                <button type="button" class="play-metronome"><box-icon name='play-circle' size="sm" color="#4fc04f"></box-icon></button>
+                <button type="button" id="play-metronome"><box-icon name='play-circle' size="sm" color="#4fc04f"></box-icon></button>
             </div>
+            <audio id="bpm-tick" src="metronome/metro.wav"></audio>
             <div class="keys-notes">
                 <div class="key-tones">
-                    <span>Show Keys</span>
+                    <span>Show keys</span>
                     <input type="checkbox" id="show-keys" checked>
                 </div>
                 <div class="key-notes">
-                    <span>Show Notes</span>
+                    <span>Show notes</span>
                     <input type="checkbox" id="show-keys" checked>
                 </div>
             </div>
@@ -51,18 +52,10 @@
                     <input type="button" value="OPEN" class="open-songbook">
                 </div>
                         <ul class="songs hide-songbook">
+                            <li><a href="#">Radiohead - Everything in its right place</a></li>
+                            <li><a href="#">John Lennon - Imagine</a></li>
                             <li><a href="#">Coldplay - Clocks</a></li>
-                            <li><a href="#">Coldplay - The scientst</a></li>
-                            <li><a href="#">Beatles - let it be</a></li>
-                            <li><a href="#">Coldplay - Clocks</a></li>
-                            <li><a href="#">Coldplay - The scientst</a></li>
-                            <li><a href="#">Beatles - let it be</a></li>
-                            <li><a href="#">Coldplay - Clocks</a></li>
-                            <li><a href="#">Coldplay - The scientst</a></li>
-                            <li><a href="#">Beatles - let it be</a></li>
-                            <li><a href="#">Coldplay - Clocks</a></li>
-                            <li><a href="#">Coldplay - The scientst</a></li>
-                            <li><a href="#">Beatles - let it be</a></li>
+                            <li><a href="#">Baby Shark - Pinkfong</a></li>
                         </ul>
             </div>
         </section>
@@ -107,18 +100,32 @@
         <br><br>
         <p>Through this tutorial, you will be able to understand some basic music theory concepts and, with that, play simple songs like the ones listed in the My-Keyboard songbook. Don't be afraid of the term "theory", it's really simple, I promise!</p>
         <br><br><br>
-        
         <h2>1 - Playing with musical notes</h2>
         <br><br>
-        <p>On this keyboard we have 17 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
+        <p>On this keyboard we have 15 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
         <br>
         <p>P.S.: Calm down, programmers. In the example above, it's not the "C#" you're thinking of LOL!</p>
         <br>
-        <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a tonality (which we call "octave") different, starting from a new C, until the last of them that represents an E.  </p>
+        <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a different tonality (which we call "octave"), starting from a new C, until the last of them that represents an D.</p>
         <br><br><br>
-        <h2>2 - Playing Chords</h2>
+        <h2>2 - Playing chords</h2>
         <br><br>
         <p>Chords are a union of two or more notes. Playing them simultaneously will result in a more harmonious sound. They can be major ("happier" sounds) or minor (deeper or maybe "sad" sounds). We got some examples below, try it yourself:</p>
+        <br><br>
+        <img id="img-tutorial" src="imgs/chords.png" alt="">
+        <br><br>
+        <p>Now you can play the keyboard properly. How about trying to play one of the songs available in My-Keyboard's "Songbook"? By clicking on a song, you'll see a practical manual on how to play them, note by note, in a very easy way!</p>
+        <br><br><br>
+        <h2>3 - Show Keys and Notes</h2>
+        <br><br>
+        <p>The "Show keys" selector represents the keyboard shortcuts that, in a desktop environment, can be used to play notes. The "Show notes" selector represents the musical notes corresponding to the keyboard keys.</p>
+        <br><br><br>
+        <h2>4 - Using the metronome</h2>
+        <br><br>
+        <p>The metronome is a device used to mark time intervals from a "click" to each beat in a music. You can use it to play at the exact musical time you want, which can be faster or slower, depending on your purpose of each song to be played.</p>
+        <br>
+        <p>A good tip for using the metronome is to start slowly and then increase the speed as you feel comfortable on it. You should try it!</p>
+
 
     </section>
 
