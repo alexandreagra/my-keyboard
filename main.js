@@ -78,6 +78,7 @@ const blackKeyNotes = document.querySelectorAll(".key.black-key");
 
 keyNotes.forEach(key => {
     key.addEventListener('touchend', e => {
+        e.preventDefault()
         playTune(key)
         return;
     })
