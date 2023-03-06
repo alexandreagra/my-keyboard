@@ -4,6 +4,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    -webkit-tap-highlight-color: transparent; 
+  }
+
 body {
     display: flex;
     flex-direction: column;
