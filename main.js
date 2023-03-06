@@ -2,9 +2,9 @@
 
 const tutorialOpening = document.querySelector(".tutorial-controls input");
 const tutorialClose = document.querySelector(".close-btn");
-const volumeInput = document.querySelector(".volume-range");
 const metronomeInput = document.querySelector(".metronome-range");
 const shortcutCheckbox = document.querySelector(".key-tones input");
+const volumeInput = document.querySelector(".volume-range");
 const notesCheckbox = document.querySelector(".key-notes input");
 const keyboardKeys = document.querySelector(".keys");
 const keyboardNotesText = document.querySelectorAll(".notes");
@@ -12,32 +12,29 @@ const keyShortcut = document.querySelectorAll(".shortcut");
 const songbookOpenClose = document.querySelector(".open-songbook");
 const songBook = document.querySelector(".songs");
 
-//VOLUME INTERACTION
-
-volumeInput.addEventListener("input", volumeControl);
-
-function volumeControl(event) {
-  audio.volume = event.target.value;
-} //FALTA COMPLETAR!!!!!
+//ONLOAD FUNCTIONS
+window.onload = function(){
+    volumeRange()
+}
 
 //VOLUME RANGE CONTROLS
 
 volumeInput.addEventListener("input", () => {
-  const volumeCount = document.querySelector(".volume-count");
-  volumeCount.textContent = volumeInput.value;
+    const volumeCount = document.querySelector(".volume-count");
+    volumeCount.textContent = parseInt(volumeInput.value * 100);
 });
 
 //METRONOME RANGE CONTROLS
 
 metronomeInput.addEventListener("input", () => {
-  const metronomeCount = document.querySelector(".metronome-count");
-  metronomeCount.textContent = metronomeInput.value;
+    const metronomeCount = document.querySelector(".metronome-count");
+    metronomeCount.textContent = metronomeInput.value;
 });
 
 //HIDE AND SHOW ITEMS
 
 const hideAndShowShortcuts = () => {
-  keyShortcut.forEach((keyShortcut) =>
+    keyShortcut.forEach((keyShortcut) =>
     keyShortcut.classList.toggle("hidden-keys")
   );
 };
@@ -46,25 +43,25 @@ shortcutCheckbox.addEventListener("click", hideAndShowShortcuts);
 //
 
 const hideAndShowNotes = () => {
-  keyboardNotesText.forEach((keyNotes) => keyNotes.classList.toggle("hidden-notes"));
+    keyboardNotesText.forEach((keyNotes) => keyNotes.classList.toggle("hidden-notes"));
 };
 
 notesCheckbox.addEventListener("click", hideAndShowNotes);
 //
 
 tutorialOpening.addEventListener("click", () => {
-  document.querySelector(".tutorial-modal").style.display = "flex";
+    document.querySelector(".tutorial-modal").style.display = "flex";
 });
 //
 
 tutorialClose.addEventListener("click", () => {
-  document.querySelector(".tutorial-modal").style.display = "none";
+    document.querySelector(".tutorial-modal").style.display = "none";
 });
 //
 
 songbookOpenClose.addEventListener("click", (e) => {
-  e.target.classList.toggle("changebg-songs");
-  songBook.classList.toggle("hide-songbook");
+    e.target.classList.toggle("changebg-songs");
+    songBook.classList.toggle("hide-songbook");
 });
 
 //KEYBOARD PLAYING
@@ -86,7 +83,7 @@ keyNotes.forEach(key => {
 }) //TOUCH EVENTS
 
 keyNotes.forEach(key => {
-  key.addEventListener("click", () => playTune(key));
+    key.addEventListener("click", () => playTune(key));
 });
 
 document.addEventListener('keydown', e => {
@@ -103,12 +100,24 @@ document.addEventListener('keydown', e => {
 })
 
 function playTune(key) {
-  const noteAudio = document.getElementById(key.dataset.tone);
-  noteAudio.currentTime = 0
-  noteAudio.play()
-  key.classList.add('active')
-  noteAudio.addEventListener('ended', () => {
-    key.classList.remove('active')
-  })
+    const volumeInput = document.querySelector(".volume-control input");
+    const noteAudio = document.getElementById(key.dataset.tone);
+    noteAudio.currentTime = 0
+    noteAudio.play()
+    key.classList.add('active')
+        noteAudio.addEventListener('ended', () => {
+            key.classList.remove('active')
+        })
 }
+
+
+let volumeControl = document.querySelector(".volume-control input");
+function volumeRange (){        
+    Array.from(document.querySelectorAll("audio")).forEach(function(e){
+        e.volume = volumeControl.value;
+    })
+};
+      
+volumeControl.addEventListener('change', volumeRange);
+volumeControl.addEventListener('input', volumeRange);
 
