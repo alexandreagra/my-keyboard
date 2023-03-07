@@ -30,7 +30,7 @@
             </div>
             <div class="key-notes">
                 <span>Show notes</span>
-                <input type="checkbox" id="show-keys" checked>
+                <input type="checkbox" id="show-keys" class="show-notes" checked>
             </div>
             <div class="tutorial-controls">
                 <span>Tutorial</span>
@@ -52,21 +52,21 @@
         </section>
         <div class="keyboard-keys">
             <ul class="keys">
-                <li class="key white-key" data-tone="C"><span class="notes">c</span><span class="shortcut">a</span></li>
-                <li class="key black-key" data-tone="Db"><span class="notes">c#</span><span class="shortcut">w</span></li>
-                <li class="key white-key" data-tone="D"><span class="notes">d</span><span class="shortcut">s</span></li>
-                <li class="key black-key" data-tone="Eb"><span class="notes">d#</span><span class="shortcut">e</span></li>
-                <li class="key white-key" id="e-tone" data-tone="E"><span class="notes">e</span><span class="shortcut">d</span></li>
-                <li class="key white-key" id="f-tone" data-tone="F"><span class="notes">f</span><span class="shortcut">f</span></li>
-                <li class="key black-key" data-tone="Gb"><span class="notes">f#</span><span class="shortcut">t</span></li>
-                <li class="key white-key" data-tone="G"><span class="notes">g</span><span class="shortcut">g</span></li>
-                <li class="key black-key" data-tone="Ab"><span class="notes">g#</span><span class="shortcut">y</span></li>
-                <li class="key white-key" data-tone="A"><span class="notes">a</span><span class="shortcut">h</span></li>
-                <li class="key black-key" data-tone="Bb"><span class="notes">a#</span><span class="shortcut">u</span></li>
-                <li class="key white-key" id="k-tone" data-tone="B"><span class="notes">b</span><span class="shortcut">j</span></li>
-                <li class="key white-key" id="l-tone" data-tone="CC"><span class="notes">c</span><span class="shortcut">k</span></li>
-                <li class="key black-key" data-tone="Dbb"><span class="notes">c#</span><span class="shortcut">o</span></li>
-                <li class="key white-key" data-tone="DD"><span class="notes">d</span><span class="shortcut">l</span></li>
+                <li class="key white-key" data-tone="C"><span class="shortcut">a</span><span class="notes">c</span></li>
+                <li class="key black-key" data-tone="Db"><span class="shortcut">w</span><span class="notes">c#</span></li>
+                <li class="key white-key" data-tone="D"><span class="shortcut">s</span><span class="notes">d</span></li>
+                <li class="key black-key" data-tone="Eb"><span class="shortcut">e</span><span class="notes">d#</span></li>
+                <li class="key white-key" id="e-tone" data-tone="E"><span class="shortcut">d</span><span class="notes">e</span></li>
+                <li class="key white-key" id="f-tone" data-tone="F"><span class="shortcut">f</span><span class="notes">f</span></li>
+                <li class="key black-key" data-tone="Gb"><span class="shortcut">t</span><span class="notes">f#</span></li>
+                <li class="key white-key" data-tone="G"><span class="shortcut">g</span><span class="notes">g</span></li>
+                <li class="key black-key" data-tone="Ab"><span class="shortcut">y</span><span class="notes">g#</span></li>
+                <li class="key white-key" data-tone="A"><span class="shortcut">h</span><span class="notes">a</span></li>
+                <li class="key black-key" data-tone="Bb"><span class="shortcut">u</span><span class="notes">a#</span></li>
+                <li class="key white-key" id="k-tone" data-tone="B"><span class="shortcut">j</span><span class="notes">b</span></li>
+                <li class="key white-key" id="l-tone" data-tone="CC"><span class="shortcut">k</span><span class="notes">c</span></li>
+                <li class="key black-key" data-tone="Dbb"><span class="shortcut">o</span><span class="notes">c#</span></li>
+                <li class="key white-key" data-tone="DD"><span class="shortcut">l</span><span class="notes">d</span></li>
             </ul>
         </div>
         <audio id="C" src="tones/C.wav"></audio>
@@ -90,7 +90,7 @@
         <h1>Welcome to My-keyboard tutorial!</h1>
         <br><br>
         <p>Through this tutorial, you will be able to understand some basic music theory concepts and, with that, play simple songs like the ones listed in the My-Keyboard songbook. Don't be afraid of the term "theory", it's really simple, I promise!</p>
-        <br><br><br>
+        <br><br>
         <h2>1 - Playing with musical notes</h2>
         <br><br>
         <p>On this keyboard we have 15 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
@@ -98,7 +98,7 @@
         <p>P.S.: Calm down, programmers. In the example above, it's not the "C#" you're thinking of LOL!</p>
         <br>
         <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a different tonality (which we call "octave"), starting from a new C, until the last of them that represents an D.</p>
-        <br><br><br>
+        <br><br>
         <h2>2 - Playing chords</h2>
         <br><br>
         <p>Chords are a union of two or more notes. Playing them simultaneously will result in a more harmonious sound. They can be major ("happier" sounds) or minor (deeper or maybe "sad" sounds). We got some examples below, try it yourself:</p>
@@ -106,16 +106,11 @@
         <img id="img-tutorial" src="imgs/chords.png" alt="">
         <br><br>
         <p>Now you can play the keyboard properly! How about trying to play one of the songs available in My-Keyboard's Songbook? By clicking on a song, you'll see a practical manual on how to play them in a very easy way!</p>
-        <br><br><br>
+        <br><br>
         <h2>3 - Show Keys and Notes</h2>
         <br><br>
         <p>The "Show keys" selector represents the keyboard shortcuts that, in a desktop environment, can be used to play notes. The "Show notes" selector represents the musical notes corresponding to the keyboard keys.</p>
-        <br><br><br>
-        <h2>4 - Using the metronome</h2>
-        <br><br>
-        <p>The metronome is a device used to mark time intervals from a "click" to each beat in a music. You can use it to play at the exact musical time you want, which can be faster or slower, depending on your purpose of each song to be played.</p>
         <br>
-        <p>A good tip for using the metronome is to start slowly and then increase the speed as you feel comfortable on it. You should try it!</p>
     </section>
     <section class="songbook-modal">
         <div class="baby-shark">

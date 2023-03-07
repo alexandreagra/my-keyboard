@@ -2,6 +2,8 @@
 
 const tutorialOpening = document.querySelector(".tutorial-controls input");
 const tutorialClose = document.querySelector(".close-btn");
+const songsCloseBtn = document.querySelectorAll(".close-btnsong")
+const BabySharkModal = document.querySelector(".baby-shark")
 const shortcutCheckbox = document.querySelector(".key-tones input");
 const notesCheckbox = document.querySelector(".key-notes input");
 const keyboardKeys = document.querySelector(".keys");
@@ -50,6 +52,15 @@ songbookOpenClose.addEventListener("click", (e) => {
   e.target.classList.toggle("changebg-songs");
   songBook.classList.toggle("hide-songbook");
 });
+
+songsCloseBtn.forEach((s) => {
+  s.addEventListener("click", songsCloseBtnClick)
+})
+
+function songsCloseBtnClick() {
+  document.querySelector(".songbook-modal").style.display = 'none'
+  document.querySelector(".baby-shark").style.display = 'none'
+}
 
 
 
