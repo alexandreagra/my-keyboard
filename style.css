@@ -23,10 +23,11 @@ h1 strong {
 .main-keyboard {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgb(15, 15, 15);
     padding: 24px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     margin-top: 40px;
+    z-index: 5;
 }
 
 .keyboard-branding {
@@ -123,7 +124,7 @@ h1 strong {
     margin-top: 3px;
     cursor: pointer;
     outline: none;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(70, 70, 70);
     position: relative;
     border-radius: 20px;
     appearance: none;
@@ -137,7 +138,7 @@ h1 strong {
     top: 0;
     border-radius: inherit;
     position: absolute;
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(124, 124, 124);
     transform: translateX(-50%);
     transition: all .2s ease;
 }
@@ -187,7 +188,7 @@ h1 strong {
 }
 
 .keys .white-key {
-    min-width: 72px;
+    min-width: 76px;
     height: 348px;
     border-radius: 8px;
     border: 1px solid black;
@@ -290,7 +291,7 @@ h1 strong {
 }
 
 .songs::-webkit-scrollbar {
-    width: 8px;
+    width: 16px;
 }
 
 .tutorial-modal::-webkit-scrollbar {
@@ -299,22 +300,22 @@ h1 strong {
 
 .songs::-webkit-scrollbar-track {
     background: black;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .tutorial-modal::-webkit-scrollbar-track {
-    background: rgb(63, 63, 63);
-    border-radius: 0px 20px 20px 0px;
+    background: transparent;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .songs::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .tutorial-modal::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .songs li a {
@@ -334,46 +335,49 @@ h1 strong {
 .songbook-modal {
     display: flex;
     flex-direction: row;
-    height: 280px;
+    justify-content: center;
+    align-items: center;
     overflow-y: auto;
+    height: 320px;
     top: 20px;
-    width: 992px;
-    padding: 20px;
-    margin-top: 8px;
-    border-radius: 20px 20px 20px 20px;
-    z-index: 500;
-    background-color: rgba(0, 0, 0, 0.960);
+    width: 962px;
+    padding: 0px 24px;
+    border-radius: 0px 0px 0px 0px;
+    z-index: 1;
+    background: rgb(15, 15, 15);
     color: white;
-    animation: from-bottom .8s backwards;
+    animation: from-top .8s backwards;
 }
 
 .baby-shark {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: flex-start;
-    justify-content: left;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    width: 1010px;
+    padding: 4px;
+    gap: 24px;
+    margin-right: 24px;
+    margin-bottom: 40px;
 }
 
 .baby-shark img {
-    justify-content: left;
-    width: fit-content;
-    box-sizing: border-box;
-    margin: 0 auto;
+    width: 842px;
 }
 
 .tutorial-modal{
     display: none;
-    flex-direction: column;
-    height: 240px;
+    height: 272px;
     overflow-y: auto;
     top: 20px;
-    width: 852px;
-    padding: 60px;
-    border-radius: 20px 20px 20px 20px;
-    z-index: 500;
+    width: 938px;
+    padding: 24px 36px;
+    border-radius: 0px 0px 0px 0px;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.960);
     color: white;
-    animation: from-bottom .8s backwards;
+    animation: from-top .8s backwards;
 }
 
 .tutorial-modal h1 {
@@ -399,6 +403,10 @@ h1 strong {
 .tutorial-modal p {
     text-align: justify;
     font-size: 20px;
+}
+
+.tutorial-modal img {
+    width: 924px;
 }
 
 .close-btn {
@@ -468,7 +476,7 @@ footer p {
 
 @keyframes from-top {
     0% {
-        transform: translateY(-50px);
+        transform: translateY(-12px);
         opacity: 0;
     }
     100% {

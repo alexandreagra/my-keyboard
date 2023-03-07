@@ -36,7 +36,7 @@ notesCheckbox.addEventListener("click", hideAndShowNotes);
 //
 
 tutorialOpening.addEventListener("click", () => {
-  document.querySelector(".tutorial-modal").style.display = "flex";
+  document.querySelector(".tutorial-modal").style.display = "block";
   document.querySelector(".songbook-modal").style.display = "none";
 });
 //
