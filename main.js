@@ -37,6 +37,7 @@ notesCheckbox.addEventListener("click", hideAndShowNotes);
 
 tutorialOpening.addEventListener("click", () => {
   document.querySelector(".tutorial-modal").style.display = "flex";
+  document.querySelector(".songbook-modal").style.display = "none";
 });
 //
 
@@ -49,6 +50,8 @@ songbookOpenClose.addEventListener("click", (e) => {
   e.target.classList.toggle("changebg-songs");
   songBook.classList.toggle("hide-songbook");
 });
+
+
 
 //KEYBOARD PLAYING
 
@@ -113,32 +116,3 @@ function volumeRange() {
 
 volumeControl.addEventListener("change", volumeRange);
 volumeControl.addEventListener("input", volumeRange);
-
-// METRONOME FUNCTION CONTROL
-
-const metronomeInput = document.querySelector("#metronome-range")
-const metronomePlay = document.querySelector("#play-metronome")
-const metronomeAudio = document.querySelector("#bpm-tick")
-
-let currentBpm = 60
-let isPlaying = false
-let timer = null
-
-metronomeInput.addEventListener("input", () => {
-  const metronomeCount = document.querySelector("#metronome-count")
-  metronomeCount.textContent = metronomeInput.value + ' BPM'
-});
-
-// function metronomeBeat() {
-//   metronomeAudio.currentTime = 0
-//   metronomeAudio.play()
-// }
-
-// metronomePlay.addEventListener('click', function () {
-//   if (isPlaying) {
-//     clearInterval(timer)
-//   } else {
-//     const timer = setInterval(metronomeBeat, (60*1000) / currentBpm)
-//   }
-//   isPlaying = !isPlaying
-// })

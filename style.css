@@ -23,10 +23,10 @@ h1 strong {
 .main-keyboard {
     display: flex;
     flex-direction: row;
-    background-color: rgb(63, 63, 63);
+    background-color: rgba(0, 0, 0, 0.589);
     padding: 24px;
     border-radius: 20px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .keyboard-branding {
@@ -88,11 +88,12 @@ h1 strong {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-size: 16px;
     padding: 0px 20px;
     padding-top: 0px;
     padding-bottom: 4px;
-    width: 280px;
-    gap: 16px;
+    width: 220px;
+    gap: 20px;
     align-items: flex-start;
     color: white;
 }
@@ -107,56 +108,6 @@ h1 strong {
 
 .volume-range {
     accent-color: white;
-}
-
-.metronome-control {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;   
-}
-
-#metronome-range {
-    accent-color: white;
-}
-
-.metronome-first {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-
-.metronome-all {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-#metronome-count {
-    width: 32px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#play-metronome {
-    background-color: transparent;
-    border: none;
-    justify-content: center;
-    cursor: pointer;
-}
-
-#play-metronome box-icon {
-    margin-top: 3px;
-}
-
-#play-metronome:active {
-    transform: scale(1.1);
 }
 
 .key-tones {
@@ -314,7 +265,7 @@ h1 strong {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 20px;
+    gap: 8px;
 }
 
 .songs li:hover {
@@ -329,8 +280,9 @@ h1 strong {
     display: block;
     list-style: none;
     height: 60px;
-    width: 240px;
+    width: 220px;
     overflow-y: auto;
+    font-size: 16px;
 }
 
 .hide-songbook {
@@ -342,16 +294,17 @@ h1 strong {
 }
 
 .tutorial-modal::-webkit-scrollbar {
-    width: 12px;
+    width: 16px;
 }
 
 .songs::-webkit-scrollbar-track {
     background: black;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .tutorial-modal::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgb(63, 63, 63);
+    border-radius: 0px 20px 20px 0px;
 }
 
 .songs::-webkit-scrollbar-thumb {
@@ -361,6 +314,7 @@ h1 strong {
 
 .tutorial-modal::-webkit-scrollbar-thumb {
     background-color: white;
+    border-radius: 0px 12px 12px 0px;
 }
 
 .songs li a {
@@ -378,26 +332,48 @@ h1 strong {
 }
 
 .songbook-modal {
-    display: none;
+    display: flex;
     flex-direction: row;
-    background-color: white;
+    height: 280px;
+    overflow-y: auto;
+    top: 20px;
+    width: 992px;
+    padding: 20px;
+    margin-top: 8px;
+    border-radius: 20px 20px 20px 20px;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.960);
+    color: white;
+    animation: from-bottom .8s backwards;
+}
+
+.baby-shark {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.baby-shark img {
+    justify-content: left;
+    width: fit-content;
+    box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 20px;
 }
 
 .tutorial-modal{
     display: none;
     flex-direction: column;
-    position: absolute;
-    height: 600px;
+    height: 240px;
     overflow-y: auto;
     top: 20px;
-    width: 76%;
+    width: 852px;
     padding: 60px;
+    border-radius: 20px 20px 20px 20px;
     z-index: 500;
     background-color: rgba(0, 0, 0, 0.960);
     color: white;
-    animation: from-top .8s backwards;
+    animation: from-bottom .8s backwards;
 }
 
 .tutorial-modal h1 {
@@ -430,9 +406,6 @@ h1 strong {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 60px;
-    right: 36px;
     font-size: 50px;
     background-color: transparent;
     border: none;
@@ -451,6 +424,29 @@ h1 strong {
     transform: scale(1.1);
 }
 
+.close-btnsong {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: white !important;
+    cursor: pointer;
+    text-shadow: 1px 2px 20px black;
+    height: 40px;
+    width: 40px;
+    z-index: 500;
+}
+
+.close-btnsong:hover {
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -459,7 +455,7 @@ footer {
     gap: 4px;
     width: 100%;
     padding: 12px;
-    height: 32px;
+    height: 12px;
     position: fixed;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.466);
@@ -505,7 +501,7 @@ footer p {
 
 @keyframes from-bottom {
     0% {
-        transform: translateY(-300px);
+        transform: translateY(40px);
         opacity: 0;
     }
     100% {
