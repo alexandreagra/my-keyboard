@@ -299,7 +299,7 @@ h1 strong {
 .songs {
     display: block;
     list-style: none;
-    height: 68px;
+    height: 60px;
     width: 220px;
     overflow-y: auto;
     font-size: 16px;
