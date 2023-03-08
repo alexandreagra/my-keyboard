@@ -62,6 +62,12 @@ function songsCloseBtnClick() {
   document.querySelector(".baby-shark").style.display = 'none'
 }
 
+const openBaby = document.querySelector(".baby-click")
+openBaby.addEventListener('click', () => {
+  document.querySelector('.baby-shark').style.display = 'flex'
+  document.querySelector(".songbook-modal").style.display = 'flex'
+})
+
 
 
 //KEYBOARD PLAYING

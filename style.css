@@ -25,8 +25,9 @@ h1 strong {
     flex-direction: row;
     background-color: rgb(15, 15, 15);
     padding: 24px;
-    border-radius: 20px 20px 0px 0px;
-    margin-top: 20px;
+    width: 960px;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 12px;
     z-index: 5;
 }
 
@@ -98,7 +99,7 @@ h1 strong {
     padding-top: 0px;
     padding-bottom: 4px;
     width: 220px;
-    gap: 20px;
+    gap: 16px;
     align-items: flex-start;
     color: white;
 }
@@ -197,7 +198,7 @@ h1 strong {
 
 .keys .white-key {
     min-width: 76px;
-    height: 348px;
+    height: 320px;
     border-radius: 8px;
     border: 1px solid black;
     color: black;
@@ -275,6 +276,7 @@ h1 strong {
     align-items: flex-start;
     justify-content: space-between;
     gap: 8px;
+    cursor: pointer;
 }
 
 .songs li:hover {
@@ -288,7 +290,7 @@ h1 strong {
 .songs {
     display: block;
     list-style: none;
-    height: 60px;
+    height: 68px;
     width: 220px;
     overflow-y: auto;
     font-size: 16px;
@@ -299,31 +301,34 @@ h1 strong {
 }
 
 .songs::-webkit-scrollbar {
-    width: 16px;
+    width: 8px;
 }
 
 .tutorial-modal::-webkit-scrollbar {
-    width: 16px;
+    width: 8px;
 }
 
 .songs::-webkit-scrollbar-track {
     background: black;
     border-radius: 0px 0px 0px 0px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .tutorial-modal::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 0px 0px 0px 0px;
+    background: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .songs::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .tutorial-modal::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .songs li a {
@@ -341,37 +346,36 @@ h1 strong {
 }
 
 .songbook-modal {
-    display: flex;
+    display: none;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     overflow-y: auto;
     height: 320px;
     top: 20px;
-    width: 962px;
+    width: 960px;
     padding: 0px 24px;
-    border-radius: 0px 0px 0px 0px;
-    z-index: 1;
+    border-radius: 20px 20px 20px 20px;
+    z-index: 2;
     background: linear-gradient(to top, #181818dc 5%, #0f0f0f 95%);
     color: white;
     animation: from-top .8s backwards;
 }
 
 .baby-shark {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    display: none;
     overflow-x: hidden;
-    width: 1010px;
-    padding: 4px;
-    gap: 24px;
-    margin-right: 24px;
-    margin-bottom: 40px;
+    gap: 12px;
+    padding: 24px;
+    gap: 32px;
+    position: fixed;
+    margin-bottom: 10px;
 }
 
 .baby-shark img {
-    width: 842px;
+    width: 868px;
+    height: 240px;
+    padding: 10px;
 }
 
 .tutorial-modal{
@@ -379,11 +383,11 @@ h1 strong {
     height: 272px;
     overflow-y: auto;
     top: 20px;
-    width: 938px;
-    padding: 24px 36px;
-    border-radius: 0px 0px 0px 0px;
+    width: 960px;
+    padding: 24px 24px;
+    border-radius: 20px 20px 20px 20px;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.960);
+    background: linear-gradient(to top, #181818dc 5%, #0f0f0f 95%);
     color: white;
     animation: from-top .8s backwards;
 }
@@ -430,7 +434,7 @@ h1 strong {
     text-shadow: 1px 2px 20px black;
     height: 40px;
     width: 40px;
-    z-index: 500;
+    z-index: 3;
 }
 
 .close-btn:hover {
@@ -445,7 +449,6 @@ h1 strong {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
     background-color: transparent;
     border: none;
     color: white !important;
@@ -453,7 +456,7 @@ h1 strong {
     text-shadow: 1px 2px 20px black;
     height: 40px;
     width: 40px;
-    z-index: 500;
+    z-index: 3;
 }
 
 .close-btnsong:hover {
@@ -474,6 +477,7 @@ footer {
     height: 12px;
     position: fixed;
     bottom: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.466);
 }
 
