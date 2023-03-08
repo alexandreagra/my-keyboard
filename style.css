@@ -6,6 +6,7 @@
 
 html {
     -webkit-tap-highlight-color: transparent; 
+    scroll-behavior: smooth ;
   }
 
 body {
@@ -114,6 +115,14 @@ h1 strong {
 
 .volume-range {
     accent-color: white;
+}
+
+.volume-range::-moz-range-thumb {
+    accent-color: white;
+}
+
+.volume-count {
+    width: 28px;
 }
 
 .key-tones {
