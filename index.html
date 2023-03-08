@@ -12,113 +12,111 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="main-keyboard">
-        <section class="keyboard-functions">
-            <div class="keyboard-branding">
-                <h1><strong>My</strong>-Keys</h1>
-            </div>
-            <div class="volume-control">
-                <span>Volume</span>
-                <input type="range" class="volume-range" value="" min="0" max="1" step="0.01">
-                <span class="volume-count">50</span>
-            </div>
-            <div class="keys-notes">
-                <div class="key-tones">
-                    <span>Show keys</span>
-                    <input type="checkbox" id="show-keys" checked>
+        <main class="main-keyboard">
+            <section class="keyboard-functions">
+                <div class="keyboard-branding">
+                    <h1><strong>My</strong>-Keys</h1>
                 </div>
-            </div>
-            <div class="key-notes">
-                <span>Show notes</span>
-                <input type="checkbox" id="show-keys" class="show-notes" checked>
-            </div>
-            <div class="tutorial-controls">
-                <span>Tutorial</span>
-                <input type="button" value="OPEN" class="open-tutorial">
-                <span class="learn">*Learn how to play!</span>
-            </div>
-            <div class="songbook">
-                <div class="songbook-controls">
-                    <span>Songbook</span>
-                    <input type="button" value="OPEN" class="open-songbook">
+                <div class="volume-control">
+                    <span>Volume</span>
+                    <input type="range" class="volume-range" value="" min="0" max="1" step="0.01">
+                    <span class="volume-count">50</span>
                 </div>
-                        <ul class="songs hide-songbook">
-                            <li class="john-click">John Lennon - Imagine</li>
-                            <li class="cold-click">Coldplay - The scientist</li>
-                            <li class="baby-click">Baby Shark - Pinkfong</li>
-                            <li class="radio-click">Radiohead - Everything in its right place</li>
-                        </ul>
+                <div class="keys-notes">
+                    <div class="key-tones">
+                        <span>Show keys</span>
+                        <input type="checkbox" id="show-keys" checked>
+                    </div>
+                </div>
+                <div class="key-notes">
+                    <span>Show notes</span>
+                    <input type="checkbox" id="show-keys" class="show-notes" checked>
+                </div>
+                <div class="tutorial-controls">
+                    <span>Tutorial</span>
+                    <input type="button" value="OPEN" class="open-tutorial">
+                    <span class="learn">*Learn how to play!</span>
+                </div>
+                <div class="songbook">
+                    <div class="songbook-controls">
+                        <span>Songbook</span>
+                        <input type="button" value="OPEN" class="open-songbook">
+                    </div>
+                            <ul class="songs hide-songbook">
+                                <li class="john-click">John Lennon - Imagine</li>
+                                <li class="cold-click">Coldplay - The scientist</li>
+                                <li class="baby-click">Baby Shark - Pinkfong</li>
+                                <li class="radio-click">Radiohead - Everything in its right place</li>
+                            </ul>
+                </div>
+            </section>
+            <div class="keyboard-keys">
+                <ul class="keys">
+                    <li class="key white-key" data-tone="C"><span class="shortcut">a</span><span class="notes">c</span></li>
+                    <li class="key black-key" data-tone="Db"><span class="shortcut">w</span><span class="notes">c#</span></li>
+                    <li class="key white-key" data-tone="D"><span class="shortcut">s</span><span class="notes">d</span></li>
+                    <li class="key black-key" data-tone="Eb"><span class="shortcut">e</span><span class="notes">d#</span></li>
+                    <li class="key white-key" id="e-tone" data-tone="E"><span class="shortcut">d</span><span class="notes">e</span></li>
+                    <li class="key white-key" id="f-tone" data-tone="F"><span class="shortcut">f</span><span class="notes">f</span></li>
+                    <li class="key black-key" data-tone="Gb"><span class="shortcut">t</span><span class="notes">f#</span></li>
+                    <li class="key white-key" data-tone="G"><span class="shortcut">g</span><span class="notes">g</span></li>
+                    <li class="key black-key" data-tone="Ab"><span class="shortcut">y</span><span class="notes">g#</span></li>
+                    <li class="key white-key" data-tone="A"><span class="shortcut">h</span><span class="notes">a</span></li>
+                    <li class="key black-key" data-tone="Bb"><span class="shortcut">u</span><span class="notes">a#</span></li>
+                    <li class="key white-key" id="k-tone" data-tone="B"><span class="shortcut">j</span><span class="notes">b</span></li>
+                    <li class="key white-key" id="l-tone" data-tone="CC"><span class="shortcut">k</span><span class="notes">c</span></li>
+                    <li class="key black-key" data-tone="Dbb"><span class="shortcut">o</span><span class="notes">c#</span></li>
+                    <li class="key white-key" data-tone="DD"><span class="shortcut">l</span><span class="notes">d</span></li>
+                </ul>
+            </div>
+            <audio id="C" src="tones/C.wav"></audio>
+            <audio id="Db" src="tones/Db.wav"></audio>
+            <audio id="D" src="tones/D.wav"></audio>
+            <audio id="Eb" src="tones/Eb.wav"></audio>
+            <audio id="E" src="tones/E.wav"></audio>
+            <audio id="F" src="tones/F.wav"></audio>
+            <audio id="Gb" src="tones/Gb.wav"></audio>
+            <audio id="G" src="tones/G.wav"></audio>
+            <audio id="Ab" src="tones/Ab.wav"></audio>
+            <audio id="A" src="tones/A.wav"></audio>
+            <audio id="Bb" src="tones/Bb.wav"></audio>
+            <audio id="B" src="tones/B.wav"></audio>
+            <audio id="CC" src="tones/CC.wav"></audio>
+            <audio id="Dbb" src="tones/Dbb.wav"></audio>
+            <audio id="DD" src="tones/DD.wav"></audio>
+        </main>
+        <section class="tutorial-modal">
+            <button class="close-btn"><box-icon name='x' color="white" size="md"></box-icon></button>
+            <h1>Welcome to My-keyboard tutorial!</h1>
+            <br><br>
+            <p>Through this tutorial, you will be able to understand some basic music theory concepts and, with that, play simple songs like the ones listed in the My-Keyboard songbook. Don't be afraid of the term "theory", it's really simple, I promise!</p>
+            <br><br>
+            <h2>1 - Playing with musical notes</h2>
+            <br><br>
+            <p>On this keyboard we have 15 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
+            <br>
+            <p>P.S.: Calm down, programmers. In the example above, it's not the "C#" you're thinking of LOL!</p>
+            <br>
+            <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a different tonality (which we call "octave"), starting from a new C, until the last of them that represents an D.</p>
+            <br><br>
+            <h2>2 - Playing chords</h2>
+            <br><br>
+            <p>Chords are a union of two or more notes. Playing them simultaneously will result in a more harmonious sound. They can be major ("happier" sounds) or minor (deeper or maybe "sad" sounds). We got some examples below, try it yourself:</p>
+            <br><br>
+            <img id="img-tutorial" src="imgs/chords.png" alt="">
+            <br><br>
+            <p>Now you can play the keyboard properly! How about trying to play one of the songs available in My-Keyboard's Songbook? By clicking on a song, you'll see a practical manual on how to play them in a very easy way!</p>
+            <br><br>
+            <h2>3 - Show Keys and Notes</h2>
+            <br><br>
+            <p>The "Show keys" selector represents the keyboard shortcuts that, in a desktop environment, can be used to play notes. The "Show notes" selector represents the musical notes corresponding to the keyboard keys.</p>
+        </section>
+        <section class="songbook-modal">
+            <div class="baby-shark">
+                <button class="close-btnsong"><box-icon name='x' color="white" size="md"></box-icon></button>
+                <img src="imgs/baby shark.png" alt="">
             </div>
         </section>
-        <div class="keyboard-keys">
-            <ul class="keys">
-                <li class="key white-key" data-tone="C"><span class="shortcut">a</span><span class="notes">c</span></li>
-                <li class="key black-key" data-tone="Db"><span class="shortcut">w</span><span class="notes">c#</span></li>
-                <li class="key white-key" data-tone="D"><span class="shortcut">s</span><span class="notes">d</span></li>
-                <li class="key black-key" data-tone="Eb"><span class="shortcut">e</span><span class="notes">d#</span></li>
-                <li class="key white-key" id="e-tone" data-tone="E"><span class="shortcut">d</span><span class="notes">e</span></li>
-                <li class="key white-key" id="f-tone" data-tone="F"><span class="shortcut">f</span><span class="notes">f</span></li>
-                <li class="key black-key" data-tone="Gb"><span class="shortcut">t</span><span class="notes">f#</span></li>
-                <li class="key white-key" data-tone="G"><span class="shortcut">g</span><span class="notes">g</span></li>
-                <li class="key black-key" data-tone="Ab"><span class="shortcut">y</span><span class="notes">g#</span></li>
-                <li class="key white-key" data-tone="A"><span class="shortcut">h</span><span class="notes">a</span></li>
-                <li class="key black-key" data-tone="Bb"><span class="shortcut">u</span><span class="notes">a#</span></li>
-                <li class="key white-key" id="k-tone" data-tone="B"><span class="shortcut">j</span><span class="notes">b</span></li>
-                <li class="key white-key" id="l-tone" data-tone="CC"><span class="shortcut">k</span><span class="notes">c</span></li>
-                <li class="key black-key" data-tone="Dbb"><span class="shortcut">o</span><span class="notes">c#</span></li>
-                <li class="key white-key" data-tone="DD"><span class="shortcut">l</span><span class="notes">d</span></li>
-            </ul>
-        </div>
-        <audio id="C" src="tones/C.wav"></audio>
-        <audio id="Db" src="tones/Db.wav"></audio>
-        <audio id="D" src="tones/D.wav"></audio>
-        <audio id="Eb" src="tones/Eb.wav"></audio>
-        <audio id="E" src="tones/E.wav"></audio>
-        <audio id="F" src="tones/F.wav"></audio>
-        <audio id="Gb" src="tones/Gb.wav"></audio>
-        <audio id="G" src="tones/G.wav"></audio>
-        <audio id="Ab" src="tones/Ab.wav"></audio>
-        <audio id="A" src="tones/A.wav"></audio>
-        <audio id="Bb" src="tones/Bb.wav"></audio>
-        <audio id="B" src="tones/B.wav"></audio>
-        <audio id="CC" src="tones/CC.wav"></audio>
-        <audio id="Dbb" src="tones/Dbb.wav"></audio>
-        <audio id="DD" src="tones/DD.wav"></audio>
-    </main>
-    <section class="tutorial-modal">
-        <button class="close-btn"><box-icon name='x' color="white" size="md"></box-icon></button>
-        <h1>Welcome to My-keyboard tutorial!</h1>
-        <br><br>
-        <p>Through this tutorial, you will be able to understand some basic music theory concepts and, with that, play simple songs like the ones listed in the My-Keyboard songbook. Don't be afraid of the term "theory", it's really simple, I promise!</p>
-        <br><br>
-        <h2>1 - Playing with musical notes</h2>
-        <br><br>
-        <p>On this keyboard we have 15 musical notes, where the white keys are the "natural notes" (C, D, E, F...), and the black keys are the accidental notes (commonly known as sharps and flats), for example: C#, which is a note between C and D.</p>
-        <br>
-        <p>P.S.: Calm down, programmers. In the example above, it's not the "C#" you're thinking of LOL!</p>
-        <br>
-        <p>The other 5 musical notes on the keyboard, are the continuation of the same notes, in a different tonality (which we call "octave"), starting from a new C, until the last of them that represents an D.</p>
-        <br><br>
-        <h2>2 - Playing chords</h2>
-        <br><br>
-        <p>Chords are a union of two or more notes. Playing them simultaneously will result in a more harmonious sound. They can be major ("happier" sounds) or minor (deeper or maybe "sad" sounds). We got some examples below, try it yourself:</p>
-        <br><br>
-        <img id="img-tutorial" src="imgs/chords.png" alt="">
-        <br><br>
-        <p>Now you can play the keyboard properly! How about trying to play one of the songs available in My-Keyboard's Songbook? By clicking on a song, you'll see a practical manual on how to play them in a very easy way!</p>
-        <br><br>
-        <h2>3 - Show Keys and Notes</h2>
-        <br><br>
-        <p>The "Show keys" selector represents the keyboard shortcuts that, in a desktop environment, can be used to play notes. The "Show notes" selector represents the musical notes corresponding to the keyboard keys.</p>
-        <br>
-    </section>
-    <section class="songbook-modal">
-        <div class="baby-shark">
-            <button class="close-btnsong"><box-icon name='x' color="white" size="md"></box-icon></button>
-            <img src="imgs/baby shark.png" alt="">
-        </div>
-    </section>
-
     <footer>
         <p>Developed and designed by: Alexandre Agra D. Filho.</p>
         <p>Audio and image contents avaliable in my GitHub repository, free to use!</p>
