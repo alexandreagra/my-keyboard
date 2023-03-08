@@ -64,6 +64,7 @@ function songsCloseBtnClick() {
 
 const openBaby = document.querySelector(".baby-click")
 openBaby.addEventListener('click', () => {
+  document.querySelector(".tutorial-modal").style.display = "none";
   document.querySelector('.baby-shark').style.display = 'flex'
   document.querySelector(".songbook-modal").style.display = 'flex'
 })
